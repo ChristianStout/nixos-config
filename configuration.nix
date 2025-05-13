@@ -104,12 +104,14 @@
   # services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
+  programs.zsh.enable = true;
   users.users.gaylambda = {
     isNormalUser = true;
     extraGroups = [ "wheel" ]; # Enable ‘sudo’ for the user.
     packages = with pkgs; [
       tree
     ];
+    shell = pkgs.zsh;
   };
 
   programs.firefox.enable = true;
@@ -136,6 +138,7 @@
     pavucontrol
     zsh
     git
+    fastfetch
     
     # i3
     picom
