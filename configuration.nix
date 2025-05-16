@@ -150,6 +150,8 @@
     blender
     odin
     cargo
+    anki
+    steam
 
 
   ];
